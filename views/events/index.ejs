@@ -12,11 +12,11 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/gasandnectar">Home/events</a>
+                    <a href="/events/gasandnectar">Home/events</a>
                 </li>
                 
                 <li>
-                    <a href="/merch">Merch Plug</a>
+                    <a href="/events/merch">Merch Plug</a>
                 </li>
             </ul>
         </nav>
@@ -24,13 +24,15 @@
     <main>
         <h2>up coming event </h2>
         <ul>
-            shows event info
+
                 <% for(let i=0; i < event.length; i++){ %>
-                    <a href="<%event._id%>">
+                   
             <li>
+                <a href="/Users/claudeallen/Desktop/GAProjects/PROJECT2/views/events/<%=event[i]._id%>">
                <img src="<%=event[i].img%>" alt="Event Photo"> 
+                </a>
             </li>
-            </a>
+          
             <li>
                 <%=event[i].name%>
             </li>

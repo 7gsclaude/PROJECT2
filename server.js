@@ -67,16 +67,6 @@ app.get("/", (req, res) => {
 // Routes
 //___________________
 
-//induces links shhould be below
-
-//i
-////EVENT index page, all the other parts of this file should be hidden for users thatt do not have tthe login i create at thhe end
-// app.get("/gasandnectar", (req, res) => {
-//   ///todo write out models
-//   Event.find(req.params.id, (err, event) => {
-//     res.render("events/index.ejs", { event });
-//   });
-// });
 
 //n
 app.get('/gasandnectar/new', (req, res) => {
@@ -93,7 +83,6 @@ app.delete("/gasandnectar/:id", (req, res) => {
 });
 
 //u
-
 app.put("/:id", (req, res) => {
   Event.findByIdAndUpdate(req.params.id, req.body, () => {
     res.redirect("/gasandnectar");
@@ -108,19 +97,22 @@ app.post("/gasandnectar", (req, res) => {
 });
 
 //e
-app.get("/gasandnectar:id/edit", (req, res) => {
+app.get("/gasandnectar/:id/edit", (req, res) => {
   Event.findById(req.params.id, (err, event) => {
     res.render("events/edit.ejs", {event});
   });
 });
 
 //s
-app.get("/gasandnectar/:id", (req, res) => {
-  Event.findById(req.params.id, (err, event) => {
-      // console.log(event); will populate author into object
-      res.render("event/show.ejs", {event});
+app.get(
+  "/Users/claudeallen/Desktop/GAProjects/PROJECT2/views/events/:id",
+  (req, res) => {
+    Event.findById(req.params.id, (err, event) => {
+      console.log(event); //will populate author into object
+      res.render("events/show.ejs", { event });
     });
-});
+  }
+);
 
 //___________________
 //Listener
