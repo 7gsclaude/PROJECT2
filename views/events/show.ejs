@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/gasandnectar">Home/events</a>
+                    <a href="/events/gasandnectar">Home/events</a>
                 </li>
         
                 <li>
@@ -28,17 +28,18 @@
         
     </header>
     <section>
-        <form action='/gasandnectar/<%=event._id%>?_method=DELETE' method='POST'>
+        <h3>Event Details</h3>
+    
+    </section>
+    <section>
+        <form action='event/gasandnectar/<%=event._id%>?_method=DELETE' method='POST'>
             <input type='submit' value='Delete Event' />
         </form>
     </section>
     <section>
-        <a href='/gasandnectar/<%=event._id%>/edit'>Edit</a>
+        <a href='event/gasandnectar/<%=event._id%>/edit'>Edit</a>
     </section>
-    <section>
-        <h3>Shown event details</h3>
-       
-    </section>
+    
 
 </body>
 

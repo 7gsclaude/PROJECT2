@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gas&Nectar</title>
 </head>
+
 <body>
     <header>
         <h1>Events gas and nectar</h1>
@@ -14,7 +16,7 @@
                 <li>
                     <a href="/events/gasandnectar">Home/events</a>
                 </li>
-                
+
                 <li>
                     <a href="/events/merch">Merch Plug</a>
                 </li>
@@ -25,22 +27,23 @@
         <h2>up coming event </h2>
         <ul>
 
-                <% for(let i=0; i < event.length; i++){ %>
-                   
+            <% for(let i=0; i < event.length; i++){ %>
+
+                <li>
+                    <a href="/Users/claudeallen/Desktop/GAProjects/PROJECT2/views/events/<%=event[i]._id%>">
+                        <img src="<%=event[i].img%>" alt="Event Photo">
+                    </a>
+                </li>
+
+                <li>
+                    <%=event[i].name%>
+                </li>
             <li>
-                <a href="/Users/claudeallen/Desktop/GAProjects/PROJECT2/views/events/<%=event[i]._id%>">
-               <img src="<%=event[i].img%>" alt="Event Photo"> 
-                </a>
+               <%=event[i].courses%>
             </li>
-          
-            <li>
-                <%=event[i].name%>
-            </li>
-            <li>
-                <%=event[i].courses%>
-           </li>
-           <li><%=event[i].location%>
-           </li>
+                <li>
+                    <%=event[i].location%>
+                </li>
         </ul>
         <%}%>
     </main>

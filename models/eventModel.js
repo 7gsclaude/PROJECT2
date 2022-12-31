@@ -18,7 +18,7 @@ name: {
             
         },
 courses: {
-            type: Array, // not sure why i put brackets around it [] bbefore this was edited 
+            type: String, // not sure why i put brackets around it [] bbefore this was edited 
 }, 
         
     },
