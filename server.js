@@ -76,7 +76,7 @@ app.get('/gasandnectar/new', (req, res) => {
 })
 
 //d 
-app.delete("/gasandnectar/:id", (req, res) => {
+app.delete("/:id", (req, res) => {
   Event.findByIdAndRemove(req.params.id, () => {
     res.redirect("/gasandnectar");
   });

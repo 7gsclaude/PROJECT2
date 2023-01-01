@@ -5,6 +5,10 @@
     <meta charset='utf-8'>
     <title>Gas&Nectar</title>
 </head>
+<section>
+    <h3>Event Details</h3>
+
+</section>
 
 <body>
     <header>
@@ -25,12 +29,15 @@
 
         <p>Location <%= event.location%>
         </p>
+        <p>Name of event <%=event.name%></p>
+        <p>courses <%=event.courses%></p>
+        <p> <img src="<%=event.img%>" alt="event photo show page">  </p>
         
     </header>
-    <section>
-        <h3>Event Details</h3>
-    
-    </section>
+   
+
+<!-- going to want to hide the following delete and edit section from USERs TODO -->
+
     <section>
         <form action='event/gasandnectar/<%=event._id%>?_method=DELETE' method='POST'>
             <input type='submit' value='Delete Event' />
