@@ -12,8 +12,8 @@
         Add new events to the site 
     </h1>
     <main>
-        <form action="/gasandnectar" method="POST">
-            <select name="locations">
+        <form action="/events/gasandnectar" method="POST">
+            <select name="events">
                 <% event.forEach(e=> { %>
                     <option value="<%= e._id%>">
                         <%= e.name %>

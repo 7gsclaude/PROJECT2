@@ -22,7 +22,7 @@ router.get("/gasandnectar", (req, res) => {
 //u
 //c
 //e
-//s
+
     
     
 

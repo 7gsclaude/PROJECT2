@@ -97,7 +97,7 @@ app.post("/gasandnectar", (req, res) => {
 });
 
 //e
-app.get("/gasandnectar/:id/edit", (req, res) => {
+app.get("events/gasandnectar/:id/edit", (req, res) => {
   Event.findById(req.params.id, (err, event) => {
     res.render("events/edit.ejs", {event});
   });
@@ -105,7 +105,7 @@ app.get("/gasandnectar/:id/edit", (req, res) => {
 
 //s
 app.get(
-  "/Users/claudeallen/Desktop/GAProjects/PROJECT2/views/events/:id",
+  "/Users/claudeallen/Desktop/GAProjects/PROJECT2/views/events/gasandnectar/:id",
   (req, res) => {
     Event.findById(req.params.id, (err, event) => {
       console.log(event); //will populate author into object
@@ -113,6 +113,7 @@ app.get(
     });
   }
 );
+
 
 //___________________
 //Listener
