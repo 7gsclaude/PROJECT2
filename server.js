@@ -103,16 +103,7 @@ app.get("events/gasandnectar/:id/edit", (req, res) => {
   });
 });
 
-//s
-app.get(
-  "/Users/claudeallen/Desktop/GAProjects/PROJECT2/views/events/gasandnectar/:id",
-  (req, res) => {
-    Event.findById(req.params.id, (err, event) => {
-      console.log(event); //will populate author into object
-      res.render("events/show.ejs", { event });
-    });
-  }
-);
+
 
 
 //___________________

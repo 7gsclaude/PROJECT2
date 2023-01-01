@@ -22,7 +22,19 @@ router.get("/gasandnectar", (req, res) => {
 //u
 //c
 //e
-
+//s
+router.get(
+  "/gasandnectar/:id",
+  (req, res) => {
+    Event.findById(req.params.id, (err, event) => {
+      console.log(event); //will populate author into object
+      res.render(
+        "events/show.ejs",
+        { event }
+      );
+    });
+  }
+);
     
     
 
