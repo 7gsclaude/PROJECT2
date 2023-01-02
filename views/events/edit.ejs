@@ -28,12 +28,15 @@
             <h2>Event Attributes/Values</h2>
             enter event edits 
           
-            <form action="events/gasandnectar/<%=event._id%>?+method=PUT" method="POST"> 
-            Location: <input type="text" value="<%=event.location%>"><br>
-            Name:<input type="text" value="<%=event.name%>"><br>
-            Img:<input type="text" value="<%=event.img%>"><br>
-            Courses:<input type="text" value="<%=event.courses%>"> <br>
-            <input type="submit" value="Publish Edit">
+            <form action="/events/gasandnectar/<%=event._id%>/?_method=PUT" method="POST"> 
+                <!--  -->
+            Location: <input  type="text" name="location" value="<%=event.location%>"><br>
+            Name:<input type="text" name="name" value="<%=event.name%>"><br>
+            Img:<input type="text" name="img" value="<%=event.img%>"><br>
+            Courses:<input type="text" name="courses" value="<%=event.courses%>"> <br>
+            <input type="submit" value="Post Edit">
+            
+<!-- i need to write name into input in order to actually communicate wiht mongo -->
             </form>
         </main>
         
