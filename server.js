@@ -10,6 +10,7 @@ const app = express();
 const db = mongoose.connection;
 
 const Event = require("./models/eventModel");
+const Store = require("./models/storeModel") // these must be requireed in the server js in order for it to work 
 //___________________
 //Port
 //___________________
@@ -53,6 +54,8 @@ app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 
 ///app controllers for routes 
 const eventController = require("./controllers/events");
+const storeController = require("./controllers/store");
+app.use('/store', storeController)
 app.use('/events', eventController);
 ///ill probably need one for the buy page too but thats cool. TODO buy page interegration 
 

@@ -31,7 +31,7 @@ router.put("/gasandnectar/:id", (req, res) => {
 });
 
 //c
-router.post("/gasandnectar", (req, res) => { //TODO 1.1.23 fix edit delete and new routes. edit needs a destination, delete isnt working, and new hasnt been created 
+router.post("/gasandnectar", (req, res) => { 
     Event.create(req.body, (err, event) => {
         res.redirect("/events/gasandnectar");
         console.log(event);

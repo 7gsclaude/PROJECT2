@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1>Events gas and nectar</h1>
+        <h1>GAS&NECTAR Store</h1>
         <nav>
             <ul>
                 <li>
@@ -20,30 +20,29 @@
                     <a href="/store/gasandnectar">Merch Plug</a>
                 </li>
                 DEV <br>
-                <a href="/events/gasandnectar/new">Add new Event </a>
+                <a href="/store/gasandnectar/new">Add new Store item </a>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>up coming event </h2>
+        <h2>Merch</h2>
         <ul>
 
-            <% for(let i=0; i < event.length; i++){ %>
+            <% for(let i=0; i < store.length; i++){ %>
 
                 <li>
-                    <a href="/events/gasandnectar/<%=event[i]._id%>">
-                        <img src="<%=event[i].img%>" alt="Event Photo">
+                    <a href="/store/gasandnectar/<%=store[i]._id%>">
+                        <!-- to store show page ^ -->
+                        <img src="<%=store[i].img%>" alt="Shop Photo">
                     </a>
                 </li>
+                <li><%=store[i].link%> </li>
 
                 <li>
-                    <%=event[i].name%>
+                    <%=store[i].name%>
                 </li>
-            <li>
-               <%=event[i].courses%>
-            </li>
                 <li>
-                    <%=event[i].location%>
+                    <%=store[i].img%>
                 </li>
         </ul>
         <%}%>
