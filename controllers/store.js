@@ -43,19 +43,19 @@ router.post("/gasandnectar", (req, res) => {
   });
 });
 
-// //e
-// router.get("/gasandnectar/:id/edit", (req, res) => {
-//   Event.findById(req.params.id, (err, event) => {
-//     res.render("events/edit.ejs", { event });
-//   });
-// });
+//e
+router.get("/gasandnectar/:id/edit", (req, res) => {
+  Store.findById(req.params.id, (err, store) => {
+    res.render("store/edit.ejs", { store });
+  });
+});
 
-// //s
-// router.get("/gasandnectar/:id", (req, res) => {
-//   Event.findById(req.params.id, (err, event) => {
-//     res.render("events/show.ejs", { event });
-//   });
-// });
+//s
+router.get("/gasandnectar/:id", (req, res) => {
+  Store.findById(req.params.id, (err, store) => {
+    res.render("store/show.ejs", { store });
+  });
+});
 
 // // exports
 

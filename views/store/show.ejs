@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Gas&Nectar</title>
+</head>
+<section>
+    <h3>Store Details</h3>
+
+</section>
+
+<body>
+    <header>
+        <h1>
+           store Show Page
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/events/gasandnectar">Home/events</a>
+                </li>
+
+                <li>
+                    <a href="/merch">Merch Plug</a>
+                </li>
+            </ul>
+        </nav>
+         TODO:    Make description part of the schema 
+          
+        <p><%=store.name%>
+        </p>
+        <p><%=store.link%> 
+            <!-- turn the link into a button later so the image and the button can take them to the cashdrop website  -->
+        </p>
+        <p> <img src="<%=store.img%>" alt="store item photo"> </p>
+
+    </header>
+
+
+    <!-- going to want to hide the following delete and edit section from USERs TODO -->
+
+    <section>
+        <form action='/store/gasandnectar/<%=store._id%>?_method=DELETE' method='POST'>
+            <input type='submit' value='Delete Sale Item' />
+        </form>
+    </section>
+    <section>
+        <a href='<%=store._id%>/edit'>Edit</a>
+        <!-- // ^^^^^^^^^^^^^removing all of the file path here allowed it to render. because the edit route had a preset string value of /gasandnectar/so putting anything in front of this line of code would misdirect it.  -->
+    </section>
+
+
+</body>
+
+</html>
