@@ -12,16 +12,13 @@
         Add new events to the site 
     </h1>
     <main>
-        <form action="/events/gasandnectar" method="POST">
-            <select name="events">
-                <% event.forEach(e=> { %>
-                    <option value="<%= e._id%>">
-                        <%= e.name %>
-                    </option>
-                    <% });%>
-            </select><br>
-            <input type="text" name="title" /><br />
-            <textarea name="body"></textarea><br />
+        <!-- if i get a double url its probably because i forgot a backslash somewheree -->
+        <form action="/events/gasandnectar/" method="POST">
+        Name: <input type="text" name="name"> <br>
+        Location:<input type="text" name="location" /><br />
+        Courses: <input type="text" name="courses"> <br>
+        Img:<input type="text" name="img" ><br>
+
             <input type="submit" value="Create New Event" />
         </form>
     </main>

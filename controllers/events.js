@@ -13,9 +13,7 @@ router.get("/gasandnectar", (req, res) => {
 
 //n
 router.get('/gasandnectar/new', (req, res) => {
-  Event.find({}, (err, event) => {
-    res.render('events/new.ejs')
-  })
+  res.render("events/new.ejs"); //render does not need to have the / in order for it to work  
 })
 
 //d 
@@ -34,8 +32,9 @@ router.put("/gasandnectar/:id", (req, res) => {
 
 //c
 router.post("/gasandnectar", (req, res) => { //TODO 1.1.23 fix edit delete and new routes. edit needs a destination, delete isnt working, and new hasnt been created 
-  Event.create(req.body, (err, event) => {
-    res.redirect("events/gasandnectar/");
+    Event.create(req.body, (err, event) => {
+        res.redirect("/events/gasandnectar");
+        console.log(event);
   });
 });
 
@@ -43,7 +42,6 @@ router.post("/gasandnectar", (req, res) => { //TODO 1.1.23 fix edit delete and n
 router.get("/gasandnectar/:id/edit",(req, res) => {
     Event.findById(req.params.id, (err, event) => {
         res.render("events/edit.ejs", { event });
-        console.log(event);
     });
   }
 );

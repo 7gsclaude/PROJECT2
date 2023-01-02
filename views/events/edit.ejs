@@ -29,7 +29,7 @@
             enter event edits 
           
             <form action="/events/gasandnectar/<%=event._id%>/?_method=PUT" method="POST"> 
-                <!--  -->
+                <!-- the action refers to what is being changed or created. in this case the items value within my schema are getting changed.  -->
             Location: <input  type="text" name="location" value="<%=event.location%>"><br>
             Name:<input type="text" name="name" value="<%=event.name%>"><br>
             Img:<input type="text" name="img" value="<%=event.img%>"><br>
