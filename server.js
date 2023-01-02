@@ -51,7 +51,7 @@ app.use(express.urlencoded({ extended: false })); // extended: false - does not 
 //use method override
 app.use(methodOverride("_method")); // allow POST, PUT and DELETE from a form
 
-///app controllers 
+///app controllers for routes 
 const eventController = require("./controllers/events");
 app.use('/events', eventController);
 ///ill probably need one for the buy page too but thats cool. TODO buy page interegration 
@@ -63,45 +63,7 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-//___________________
-// Routes
-//___________________
 
-
-//n
-app.get('/gasandnectar/new', (req, res) => {
-  Event.find({}, (err, event) => {
-    res.render('events/new.ejs')
-  })
-})
-
-//d 
-app.delete("/:id", (req, res) => {
-  Event.findByIdAndRemove(req.params.id, () => {
-    res.redirect("/gasandnectar");
-  });
-});
-
-//u
-app.put("/:id", (req, res) => {
-  Event.findByIdAndUpdate(req.params.id, req.body, () => {
-    res.redirect("/gasandnectar");
-  });
-});
-
-//c
-app.post("/gasandnectar", (req, res) => {
-  Event.create(req.body, (err, event) => {
-    res.redirect("/gasandnectar");
-  });
-});
-
-//e
-app.get("events/gasandnectar/:id/edit", (req, res) => {
-  Event.findById(req.params.id, (err, event) => {
-    res.render("events/edit.ejs", {event});
-  });
-});
 
 
 

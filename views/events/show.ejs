@@ -30,7 +30,7 @@
         <p>Location <%=event.location%></p>
         <p>Name of event <%=event.name%></p>
         <p>courses <%=event.courses%></p>
-        <p> <img src="<%=event.img%>" alt="event photo show page">  </p>
+        <p> <img src="<%=event.img%>" alt="event photo">  </p>
         
     </header>
    
@@ -38,12 +38,13 @@
 <!-- going to want to hide the following delete and edit section from USERs TODO -->
 
     <section>
-        <form action='event/gasandnectar/<%=event._id%>?_method=DELETE' method='POST'>
+        <form action='views/events/gasandnectar/<%=event._id%>?_method=DELETE' method='POST'>
             <input type='submit' value='Delete Event' />
         </form>
     </section>
     <section>
-        <a href='/Users/claudeallen/Desktop/GAProjects/PROJECT2/views/events/<%=event._id%>/edit'>Edit</a>
+        <a href='<%=event._id%>/edit'>Edit</a> 
+        <!-- // ^^^^^^^^^^^^^removing all of the file path here allowed it to render. because the edit route had a preset string value of /gasandnectar/so putting anything in front of this line of code would misdirect it.  -->
     </section>
     
 

@@ -26,13 +26,14 @@
         <main>
 
             <h2>Event Attributes/Values</h2>
+            enter event edits 
           
-            <form action="/gasandnectar/<%=events._id%>?+method=PUT" method="POST">
-            <input type="text" value="<%=event.location%>"><br>
-            <input type="text" value="<%=event.name%>"><br>
-            <input type="text" value="<%=event.img%>">
-            <input type="text" value="<%=event.courses%>">
-            
+            <form action="events/gasandnectar/<%=event._id%>?+method=PUT" method="POST"> 
+            Location: <input type="text" value="<%=event.location%>"><br>
+            Name:<input type="text" value="<%=event.name%>"><br>
+            Img:<input type="text" value="<%=event.img%>"><br>
+            Courses:<input type="text" value="<%=event.courses%>"> <br>
+            <input type="submit" value="Publish Edit">
             </form>
         </main>
         
