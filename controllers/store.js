@@ -3,6 +3,7 @@ const router = express.Router();
 const Store = require("../models/storeModel");
 
 ///todo change all the locations so that it will match store/gasandnectar? 
+// set up routes 
 
 
 //induces
@@ -18,29 +19,29 @@ router.get("/gasandnectar/new", (req, res) => {
   res.render("store/new.ejs"); //render does not need to have the / in order for it to work
 });
 
-// //d
-// router.delete("/gasandnectar/:id", (req, res) => {
-//   //labeling gas adn nectar in the route in order to target where the deletion is happening
-//   Event.findByIdAndRemove(req.params.id, () => {
-//     res.redirect("/events/gasandnectar");
-//   });
-// });
+//d
+router.delete("/gasandnectar/:id", (req, res) => {
+  //labeling gas adn nectar in the route in order to target where the deletion is happening
+  Store.findByIdAndRemove(req.params.id, () => {
+    res.redirect("/store/gasandnectar");
+  });
+});
 
-// //u
-// router.put("/gasandnectar/:id", (req, res) => {
-//   Event.findByIdAndUpdate(req.params.id, req.body, () => {
-//     res.redirect("/events/gasandnectar"); // update route needs to match the landing of whwere the data needs to go
-//   });
-// });
+//u
+router.put("/gasandnectar/:id", (req, res) => {
+  Store.findByIdAndUpdate(req.params.id, req.body, () => {
+    res.redirect("/store/gasandnectar"); // update route needs to match the landing of whwere the data needs to go
+  });
+});
 
-// //c
-// router.post("/gasandnectar", (req, res) => {
-//   //TODO 1.1.23 fix edit delete and new routes. edit needs a destination, delete isnt working, and new hasnt been created
-//   Event.create(req.body, (err, event) => {
-//     res.redirect("/events/gasandnectar");
-//     console.log(event);
-//   });
-// });
+//c
+router.post("/gasandnectar", (req, res) => {
+  //TODO 1.1.23 fix edit delete and new routes. edit needs a destination, delete isnt working, and new hasnt been created
+  Store.create(req.body, (err, store) => {
+    res.redirect("/store/gasandnectar");
+    console.log(store);
+  });
+});
 
 // //e
 // router.get("/gasandnectar/:id/edit", (req, res) => {
