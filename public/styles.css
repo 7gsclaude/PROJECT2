@@ -1,11 +1,13 @@
+/* Global css across whole website  */
+
 h1 {
-   color : blue;
+   color : white;
 }
 
 body {
     background-color: black;
 }
 
-p {
-    color: red;
+p, li, a {
+    color: white;
 }
