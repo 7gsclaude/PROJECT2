@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const Store = require("../models/storeModel");
 
-///todo change all the locations so that it will match store/gasandnectar? 
-// set up routes 
+///todo CSS try to make a login page 
+
 
 
 //induces
