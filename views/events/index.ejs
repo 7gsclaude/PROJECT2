@@ -6,47 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
+    
     <title>Gas&Nectar</title>
 </head>
 
 <body>
     <header>
-        <h1>Events gas and nectar</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/events/gasandnectar">Home/events</a>
-                </li>
-                <li>
-                    <a href="/store/gasandnectar">Merch Plug</a>
-                </li>
-                <p>another test line</p> <br>
-                <a href="/events/gasandnectar/new">Add new Event </a>
-            </ul>
-        </nav>
+        <img id="monogram" src="/images/monogramgasandnectar.png" alt="Gas&Nectar">
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu'><label></label>
+    <ul>
+        <li><a href="/events/gasandnectar">Home</a></li>
+        <li><a href="/store/gasandnectar">Merch Plug</a></li>
+    </ul>
+</nav>
+
+<h1>Events gas and nectar</h1>
+
+<p>DEV add new route.</p> <br>
+<a href="/events/gasandnectar/new">Add new Event </a>
+
+
+
+
+
     </header>
     <main>
         <h2>up coming event </h2>
-        <ul>
-
-            <% for(let i=0; i < event.length; i++){ %>
-
-                <li>
-                    <a href="/events/gasandnectar/<%=event[i]._id%>">
-                        <img src="<%=event[i].img%>" alt="Event Photo">
-                    </a>
-                </li>
-
-                <li>
-                    <%=event[i].name%>
-                </li>
-            <li>
-               <%=event[i].courses%>
-            </li>
-                <li>
-                    <%=event[i].location%>
-                </li>
-        </ul>
+<% for(let i=0; i < event.length; i++){ %>
+<div class="parent">
+    
+    <div class="div1"> <ul><li>
+        <a href="/events/gasandnectar/<%=event[i]._id%>">
+            <img id="eventImg" src="<%=event[i].img%>" alt="Event Photo">
+        </a>
+    </li>
+    </ul>
+ </div>
+ <ul>
+    <div class="div2"> <li>
+        <%=event[i].name%>
+    </li>
+    <li>
+        <%=event[i].courses%>
+    </li>
+    <li>
+        <%=event[i].location%>
+    </li>
+    </div>
+</ul>
+    
+</div>
         <%}%>
     </main>
 </body>

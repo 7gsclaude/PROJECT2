@@ -7,7 +7,15 @@ const Event = require("../models/eventModel");
 //i ////EVENT index page, all the other parts of this file should be hidden for users thatt do not have tthe login i create at thhe end
 router.get("/gasandnectar", (req, res) => {
   Event.find(req.params.id, (err, event) => {
-    res.render("events/index.ejs", { event });
+      res.render("events/index.ejs", { event });
+      function updatemenu() {
+        if (document.getElementById("responsive-menu").checked == true) {
+          document.getElementById("menu").style.borderBottomRightRadius = "0";
+          document.getElementById("menu").style.borderBottomLeftRadius = "0";
+        } else {
+          document.getElementById("menu").style.borderRadius = "32px";
+        }
+      }
   });
 });
 

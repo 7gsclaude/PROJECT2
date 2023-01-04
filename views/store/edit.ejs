@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas&Nectar</title>
+</head>
+<nav>
+    <ul>
+        <li>
+            <a href="/events/gasandnectar">Home/events</a>
+        </li>
+
+        <li>
+            <a href="/merch">Merch Plug</a>
+        </li>
+    </ul>
+</nav>
+
+<body>
+    <header>
+        <h1>Merch Editor</h1>
+        change and location names courses and images here. <br> <br>
+        make a description for the database for Store items
+
+    </header>
+    <main>
+
+        <h2>Event Attributes/Values</h2>
+        enter event edits
+
+        <form action="/store/gasandnectar/<%=store._id%>/?_method=PUT" method="POST">
+            <!-- the action refers to what is being changed or created. in this case the items value within my schema are getting changed.  -->
+            Location: <input type="text" name="image" value="<%=store.img%>"><br>
+            Name:<input type="text" name="name" value="<%=store.name%>"><br>
+            Img:<input type="text" name="link" value="<%=store.link%>"><br>
+           
+            <input type="submit" value="Post Edit">
+
+            <!-- i need to write name into input in order to actually communicate wiht mongo -->
+        </form>
+    </main>
+
+</body>
+
+</html>
