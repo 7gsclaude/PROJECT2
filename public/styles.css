@@ -22,6 +22,8 @@ ul {
     height: 41px;
     padding-left: 18px;
     border-radius: 6px;
+    
+    /* setting position to sticky to have bar follow  */
    
 }
 
@@ -180,10 +182,12 @@ ul {
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    margin: 10%;
 }
 
 .div1 {
     grid-area: 1 / 1 / 2 / 2;
+    
 }
 
 .div2 {
@@ -192,14 +196,14 @@ ul {
 
 
 
-/*///////////// eventIndex Image styling  ////////////*/
+/*///////////// eventIndex Image/ styling  ////////////*/
 
 #monogram{ 
     /* this may be globally avail later */
-    max-width: 30%;
-    max-height: 30%; 
+    max-width: 25%;
+    max-height: 25%; 
     align-items: center;
-    /* apparently the lower code will cause a centering of the image.  */
+    /*the block and margin code will cause a centering of the image.  */
     display: block;
         margin-left: auto;
         margin-right: auto;
@@ -210,6 +214,10 @@ ul {
     max-width: 100%;
     max-height: 100%;
     /* how big it is in reference to their div */
+}
+
+#eventTitlePage{
+    text-align: center;
 }
 
 

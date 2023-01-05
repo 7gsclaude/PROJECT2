@@ -16,27 +16,23 @@
 
 <body>
     <header>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu'><label></label>
+            <ul>
+                <li><a href="/events/gasandnectar">Home</a></li>
+                <li><a href="/store/gasandnectar">Merch Plug</a></li>
+            </ul>
+        </nav>
         <img id="monogram" src="/images/monogramgasandnectar.png" alt="Gas&Nectar">
-<nav id='menu'>
-    <input type='checkbox' id='responsive-menu'><label></label>
-    <ul>
-        <li><a href="/events/gasandnectar">Home</a></li>
-        <li><a href="/store/gasandnectar">Merch Plug</a></li>
-    </ul>
-</nav>
 
-<h1>Events gas and nectar</h1>
+
+<h1 id="eventTitlePage">GAS&NECTAR UPCOMING EVENTS</h1>
 
 <p>DEV add new route.</p> <br>
 <a href="/events/gasandnectar/new">Add new Event </a>
-
-
-
-
-
     </header>
+
     <main>
-        <h2>up coming event </h2>
 <% for(let i=0; i < event.length; i++){ %>
 <div class="parent">
     

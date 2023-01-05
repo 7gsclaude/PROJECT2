@@ -33,9 +33,10 @@
 
         <form action="/store/gasandnectar/<%=store._id%>/?_method=PUT" method="POST">
             <!-- the action refers to what is being changed or created. in this case the items value within my schema are getting changed.  -->
-            Location: <input type="text" name="image" value="<%=store.img%>"><br>
+            Link: <input type="text" name="link" value="<%=store.link%>"><br>
             Name:<input type="text" name="name" value="<%=store.name%>"><br>
-            Img:<input type="text" name="link" value="<%=store.link%>"><br>
+            Img:<input type="text" name="img" value="<%=store.img%>"><br>
+            
            
             <input type="submit" value="Post Edit">
 
