@@ -18,12 +18,15 @@ User will be able to view upcoming events hosted by GAS&NECTAR and view any new 
 
 ![Screenshot 2023-01-04 at 10 38 43 PM](https://user-images.githubusercontent.com/96135428/210702986-423200e0-469d-4722-99ad-84f81f467ea4.png)
 
+<br>
 
 Link to website: https://warm-lowlands-02604.herokuapp.com/
 
-Technologies
+Technologies <br>
+<br>
 [![My Tech Stack](https://github-readme-tech-stack.vercel.app/api/cards?align=center&lineCount=1&line1=Node.js,Node.js,339933;.ENV,.ENV,ECD53F;npm,npm,CB3837;Express,Express,000000;)](https://github-readme-tech-stack.vercel.app/api/cards?align=center&lineCount=1&line1=Node.js,Node.js,339933;.ENV,.ENV,ECD53F;npm,npm,CB3837;Express,Express,000000;)
 
 
-Future Enhancements 
+Future Enhancements <br>
+<br>
 creating a login page in order to separate a developer/admin view and an everyday user. Creating an about me and also a contact route would be ideal towrds making the site more sucessful.
