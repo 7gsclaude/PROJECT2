@@ -63,6 +63,7 @@ app.use('/events', eventController);
 
 //link to the homepage, homepage
 app.get("/", (req, res) => {
+  //  heroku likes having this / as a home root 
   res.render("index.ejs");
 });
 
