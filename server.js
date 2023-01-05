@@ -60,8 +60,9 @@ app.use('/events', eventController);
 ///ill probably need one for the buy page too but thats cool. TODO buy page interegration 
 
 
+
 //link to the homepage, homepage
-app.get("/gasandnectar", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 

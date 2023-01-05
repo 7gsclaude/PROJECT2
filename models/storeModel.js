@@ -11,7 +11,7 @@ const storeSchema = new Schema(
     name: {
       type: String,
         },
-        link: {
+    link: {
         type: String,
     },
   },
