@@ -29,4 +29,5 @@ Technologies <br>
 
 Future Enhancements <br>
 <br>
-creating a login page in order to separate a developer/admin view and an everyday user. Creating an about me and also a contact route would be ideal towrds making the site more sucessful.
+* Creating a login page in order to separate a developer/admin view and an everyday user. 
+* Creating an about me and also a contact route would be ideal towrds making the site more sucessful.
