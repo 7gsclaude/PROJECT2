@@ -142,7 +142,8 @@ ul {
 
     #menu li {
         display: block;
-        float: none;
+        float: none; 
+        /* The float CSS property places an element on the left or right side of its container */
         width: auto;
     }
 
@@ -191,9 +192,10 @@ ul {
 
 
 
-/*///////////// Image styling  ////////////*/
+/*///////////// eventIndex Image styling  ////////////*/
 
-#monogram{
+#monogram{ 
+    /* this may be globally avail later */
     max-width: 30%;
     max-height: 30%; 
     align-items: center;
@@ -205,6 +207,17 @@ ul {
 }
 
 #eventImg{
+    max-width: 100%;
+    max-height: 100%;
+    /* how big it is in reference to their div */
+}
+
+
+
+/*//////////// store image styling/////////////// */
+
+
+#storeImg {
     max-width: 100%;
     max-height: 100%;
     /* how big it is in reference to their div */
