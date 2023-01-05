@@ -26,6 +26,10 @@ Technologies <br>
 <br>
 [![My Tech Stack](https://github-readme-tech-stack.vercel.app/api/cards?align=center&lineCount=1&line1=Node.js,Node.js,339933;.ENV,.ENV,ECD53F;npm,npm,CB3837;Express,Express,000000;)](https://github-readme-tech-stack.vercel.app/api/cards?align=center&lineCount=1&line1=Node.js,Node.js,339933;.ENV,.ENV,ECD53F;npm,npm,CB3837;Express,Express,000000;)
 
+* HTML
+* CSS
+* JS
+
 
 Future Enhancements <br>
 <br>
