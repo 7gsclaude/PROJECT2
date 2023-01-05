@@ -31,3 +31,5 @@ Future Enhancements <br>
 <br>
 * Creating a login page in order to separate a developer/admin view and an everyday user. 
 * Creating an about me and also a contact route would be ideal towrds making the site more sucessful.
+* Learning 3js library to implement a 3d model 
+
